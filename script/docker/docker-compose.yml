@@ -1,7 +1,7 @@
 version: '3'
 services:
   nacos:
-    image: nacos/nacos-server:0.9.0
+    image: nacos/nacos-server:1.0.0
     hostname: "nacos-standalone"
     environment:
       - MODE=standalone
@@ -15,7 +15,7 @@ services:
         ipv4_address: 172.30.0.48
 
   sentinel:
-    image: bladex/sentinel-dashboard:1.5.0
+    image: bladex/sentinel-dashboard:1.6.0
     hostname: "sentinel"
     ports:
       - 8858:8858
@@ -130,6 +130,22 @@ services:
     restart: always
     networks:
     - blade_net
+
+  blade-flow:
+    image: "${REGISTER}/blade/blade-flow:${TAG}"
+    privileged: true
+    restart: always
+    networks:
+      - blade_net
+
+  blade-flow-design:
+    image: "${REGISTER}/blade/blade-flow-design:${TAG}"
+    privileged: true
+    restart: always
+    ports:
+      - 9999:9999
+    networks:
+      - blade_net
 
 networks:
   blade_net:
