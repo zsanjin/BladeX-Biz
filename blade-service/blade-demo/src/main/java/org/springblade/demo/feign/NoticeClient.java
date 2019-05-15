@@ -36,7 +36,7 @@ import java.util.List;
 @AllArgsConstructor
 public class NoticeClient implements INoticeClient {
 
-	NoticeMapper mapper;
+	private NoticeMapper mapper;
 
 	@Override
 	@GetMapping(TOP)
