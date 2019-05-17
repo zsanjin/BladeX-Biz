@@ -45,15 +45,15 @@ public class SwaggerProvider implements SwaggerResourcesProvider {
 	public List<SwaggerResource> get() {
 		List<SwaggerResource> resources = new ArrayList<>();
 		List<RouteResource> routeResources = routeProperties.getResources();
-		routeResources.forEach(routeResource -> resources.add(swaggerResource(routeResource.getName(), routeResource.getLocation(), routeResource.getVersion())));
+		routeResources.forEach(routeResource -> resources.add(swaggerResource(routeResource)));
 		return resources;
 	}
 
-	private SwaggerResource swaggerResource(String name, String location, String version) {
+	private SwaggerResource swaggerResource(RouteResource routeResource) {
 		SwaggerResource swaggerResource = new SwaggerResource();
-		swaggerResource.setName(name);
-		swaggerResource.setLocation(location.concat(API_URI));
-		swaggerResource.setSwaggerVersion(version);
+		swaggerResource.setName(routeResource.getName());
+		swaggerResource.setLocation(routeResource.getLocation().concat(API_URI));
+		swaggerResource.setSwaggerVersion(routeResource.getVersion());
 		return swaggerResource;
 	}
 

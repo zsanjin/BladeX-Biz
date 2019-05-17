@@ -1,13 +1,6 @@
 server:
   port: 80
 
-# 聚合文档配置
-blade:
-  document:
-    resources:
-      - name: 演示模块
-        location: /blade-demo
-
 spring:
   cloud:
     gateway:
@@ -18,3 +11,9 @@ spring:
       retry:
         enabled: true
 
+# 聚合文档配置
+blade:
+  document:
+    resources:
+      - name: 演示模块
+        location: /blade-demo
