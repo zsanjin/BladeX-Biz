@@ -1,25 +1,20 @@
 server:
   port: 80
 
-# 需要配置的服务名
+# 聚合文档配置
 blade:
-  service:
-    blade-demo: blade-demo
+  document:
+    resources:
+      - name: 演示模块
+        location: /blade-demo
 
 spring:
   cloud:
     gateway:
-      routes:
-      # demo模块
-      - id: ${blade.service.blade-demo}
-        uri: lb://${blade.service.blade-demo}
-        predicates:
-        - Path=/${blade.service.blade-demo}/**
       discovery:
         locator:
           enabled: true
     loadbalancer:
       retry:
         enabled: true
-
 
