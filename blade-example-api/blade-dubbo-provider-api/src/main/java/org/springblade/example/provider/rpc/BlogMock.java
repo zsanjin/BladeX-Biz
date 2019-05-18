@@ -14,11 +14,10 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.example.consumer.rpc;
+package org.springblade.example.provider.rpc;
 
 
 import org.springblade.example.provider.entity.Blog;
-import org.springblade.example.provider.rpc.IBlogRpc;
 
 /**
  * 降级容错

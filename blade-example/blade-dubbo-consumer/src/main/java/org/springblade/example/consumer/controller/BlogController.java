@@ -36,7 +36,7 @@ public class BlogController {
 
 	@Reference(
 		version = "${blade.service.version}",
-		mock = "org.springblade.example.consumer.rpc.BlogMock",
+		mock = "org.springblade.example.provider.rpc.BlogMock",
 		//stub = "org.springblade.example.consumer.rpc.BlogStub",
 		check = false
 	)
