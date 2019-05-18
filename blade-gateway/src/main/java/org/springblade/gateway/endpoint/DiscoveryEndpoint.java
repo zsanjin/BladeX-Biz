@@ -14,7 +14,7 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.gateway.controller;
+package org.springblade.gateway.endpoint;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +37,7 @@ import java.util.Map;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/discovery")
-public class DiscoveryClientController {
+public class DiscoveryEndpoint {
 
 	private final DiscoveryClient discoveryClient;
 
