@@ -18,6 +18,8 @@ package org.springblade.common.constant;
 
 import org.springblade.core.launch.constant.AppConstant;
 
+import static org.springblade.core.launch.constant.AppConstant.APPLICATION_NAME_PREFIX;
+
 /**
  * 通用常量
  *
@@ -80,6 +82,18 @@ public interface CommonConstant {
 	 * 默认密码
 	 */
 	String DEFAULT_PASSWORD = "123456";
+
+
+	/**
+	 * dbuuo提供者
+	 */
+	String APPLICATION_DUBBO_PROVIDER_NAME = APPLICATION_NAME_PREFIX + "dubbo-provider";
+
+
+	/**
+	 * dbuuo消费者
+	 */
+	String APPLICATION_DUBBO_CONSUMER_NAME = APPLICATION_NAME_PREFIX + "dubbo-consumer";
 
 	/**
 	 * 动态获取nacos地址

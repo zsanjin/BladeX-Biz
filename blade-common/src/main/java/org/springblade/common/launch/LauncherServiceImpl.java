@@ -18,6 +18,7 @@ package org.springblade.common.launch;
 
 import org.springblade.common.constant.CommonConstant;
 import org.springblade.core.auto.service.AutoService;
+import org.springblade.core.launch.constant.AppConstant;
 import org.springblade.core.launch.service.LauncherService;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -34,9 +35,17 @@ public class LauncherServiceImpl implements LauncherService {
 	@Override
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
+		// 通用注册
 		props.setProperty("spring.cloud.nacos.discovery.server-addr", CommonConstant.nacosAddr(profile));
 		props.setProperty("spring.cloud.nacos.config.server-addr", CommonConstant.nacosAddr(profile));
 		props.setProperty("spring.cloud.sentinel.transport.dashboard", CommonConstant.sentinelAddr(profile));
+		// dubbo注册
+		props.setProperty("dubbo.application.name", appName);
+		props.setProperty("dubbo.application.qos.enable", "false");
+		props.setProperty("dubbo.protocol.name", "dubbo");
+		props.setProperty("dubbo.registry.address", "nacos://" + CommonConstant.nacosAddr(profile));
+		props.setProperty("dubbo.version", AppConstant.APPLICATION_VERSION);
+		props.setProperty("dubbo.scan.base-packages", AppConstant.BASE_PACKAGES);
 	}
 
 }
