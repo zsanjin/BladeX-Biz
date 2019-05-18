@@ -63,8 +63,6 @@ public class DynamicRouteServiceListener {
 			String group = nacosConfigProperties.getGroup();
 			String serverAddr = nacosDiscoveryProperties.getServerAddr();
 			ConfigService configService = NacosFactory.createConfigService(serverAddr);
-			String content = configService.getConfig(dataId, group, 5000);
-			System.out.println(content);
 			configService.addListener(dataId, group, new Listener() {
 				@Override
 				public void receiveConfigInfo(String configInfo) {
