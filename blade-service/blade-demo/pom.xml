@@ -32,6 +32,12 @@
             <artifactId>blade-demo-api</artifactId>
             <version>${bladex.project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>blade-core-auto</artifactId>
+            <version>${bladex.tool.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
