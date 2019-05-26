@@ -8,3 +8,19 @@ spring:
     url: ${blade.datasource.dev.url}
     username: ${blade.datasource.dev.username}
     password: ${blade.datasource.dev.password}
+
+minio:
+  enable: true
+  tenant-mode: false
+  endpoint: http://127.0.0.1:9000
+  access-key: D99KGE6ZTQXSATTJWU24
+  secret-key: QyVqGnhIQQE734UYSUFlGOZViE6+ZlDEfUG3NjhJ
+  bucket-name: bladex
+
+qiniu:
+  enable: true
+  tenant-mode: false
+  endpoint: prv0t4ij6.bkt.clouddn.com
+  access-key: N_Loh1ngBqcJovwiAJqR91Ifj2vgOWHOf8AwBA_h
+  secret-key: AuzuA1KHAbkIndCU0dB3Zfii2O3crHNODDmpxHRS
+  bucket-name: bladex

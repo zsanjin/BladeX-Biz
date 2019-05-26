@@ -29,6 +29,16 @@
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
+            <artifactId>blade-starter-minio</artifactId>
+            <version>${bladex.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>blade-starter-qiniu</artifactId>
+            <version>${bladex.tool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springblade</groupId>
             <artifactId>blade-demo-api</artifactId>
             <version>${bladex.project.version}</version>
         </dependency>
