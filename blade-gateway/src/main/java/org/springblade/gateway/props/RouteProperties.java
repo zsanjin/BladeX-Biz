@@ -18,6 +18,7 @@ package org.springblade.gateway.props;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ import java.util.List;
  * @author Chill
  */
 @Data
+@RefreshScope
 @ConfigurationProperties("blade.document")
 public class RouteProperties {
 
