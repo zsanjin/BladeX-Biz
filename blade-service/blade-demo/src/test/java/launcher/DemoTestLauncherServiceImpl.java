@@ -14,10 +14,10 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package com.example.demo.launcher;
+package launcher;
 
+import org.springblade.common.constant.CommonConstant;
 import org.springblade.core.auto.service.AutoService;
-import org.springblade.core.launch.constant.NacosConstant;
 import org.springblade.core.launch.service.LauncherService;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -29,18 +29,18 @@ import java.util.Properties;
  * @author Chill
  */
 @AutoService(LauncherService.class)
-public class DemoLauncherServiceImpl implements LauncherService {
+public class DemoTestLauncherServiceImpl implements LauncherService {
 
 	@Override
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].data-id", NacosConstant.dataId(appName, profile));
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].group", NacosConstant.NACOS_CONFIG_GROUP);
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].refresh", NacosConstant.NACOS_CONFIG_REFRESH);
+		props.setProperty("spring.cloud.nacos.discovery.server-addr", CommonConstant.NACOS_DEV_ADDR);
+		props.setProperty("spring.cloud.nacos.config.server-addr", CommonConstant.NACOS_DEV_ADDR);
+		props.setProperty("spring.cloud.sentinel.transport.dashboard", CommonConstant.SENTINEL_DEV_ADDR);
 	}
 
 	@Override
 	public int getOrder() {
-		return 20;
+		return 10;
 	}
 }
