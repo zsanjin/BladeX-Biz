@@ -30,7 +30,7 @@ services:
     ports:
     - 88:88
     volumes:
-    - /docker/nginx/gateway/nginx.conf:/etc/nginx/nginx.conf
+    - /docker/nginx/api/nginx.conf:/etc/nginx/nginx.conf
     privileged: true
     restart: always
     networks:
