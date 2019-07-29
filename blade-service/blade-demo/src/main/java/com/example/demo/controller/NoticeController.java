@@ -49,7 +49,8 @@ public class NoticeController extends BladeController implements CacheNames {
 	 * 详情
 	 */
 	@GetMapping("/detail")
-	@ApiOperation(value = "详情", notes = "传入notice", position = 1)
+	@ApiOperationSupport(order = 1)
+	@ApiOperation(value = "详情", notes = "传入notice")
 	public R<Notice> detail(Notice notice) {
 		Notice detail = noticeService.getOne(Condition.getQueryWrapper(notice));
 		return R.data(detail);
@@ -63,7 +64,8 @@ public class NoticeController extends BladeController implements CacheNames {
 		@ApiImplicitParam(name = "category", value = "公告类型", paramType = "query", dataType = "integer"),
 		@ApiImplicitParam(name = "title", value = "公告标题", paramType = "query", dataType = "string")
 	})
-	@ApiOperation(value = "分页", notes = "传入notice", position = 2)
+	@ApiOperationSupport(order = 2)
+	@ApiOperation(value = "分页", notes = "传入notice")
 	public R<IPage<Notice>> list(@ApiIgnore @RequestParam Map<String, Object> notice, Query query) {
 		IPage<Notice> pages = noticeService.page(Condition.getPage(query), Condition.getQueryWrapper(notice, Notice.class));
 		return R.data(pages);
@@ -73,7 +75,8 @@ public class NoticeController extends BladeController implements CacheNames {
 	 * 新增
 	 */
 	@PostMapping("/save")
-	@ApiOperation(value = "新增", notes = "传入notice", position = 3)
+	@ApiOperationSupport(order = 3)
+	@ApiOperation(value = "新增", notes = "传入notice")
 	public R save(@RequestBody Notice notice) {
 		return R.status(noticeService.save(notice));
 	}
@@ -82,7 +85,8 @@ public class NoticeController extends BladeController implements CacheNames {
 	 * 修改
 	 */
 	@PostMapping("/update")
-	@ApiOperation(value = "修改", notes = "传入notice", position = 4)
+	@ApiOperationSupport(order = 4)
+	@ApiOperation(value = "修改", notes = "传入notice")
 	public R update(@RequestBody Notice notice) {
 		return R.status(noticeService.updateById(notice));
 	}
@@ -91,7 +95,8 @@ public class NoticeController extends BladeController implements CacheNames {
 	 * 新增或修改
 	 */
 	@PostMapping("/submit")
-	@ApiOperation(value = "新增或修改", notes = "传入notice", position = 5)
+	@ApiOperationSupport(order = 5)
+	@ApiOperation(value = "新增或修改", notes = "传入notice")
 	public R submit(@RequestBody Notice notice) {
 		return R.status(noticeService.saveOrUpdate(notice));
 	}
@@ -100,7 +105,8 @@ public class NoticeController extends BladeController implements CacheNames {
 	 * 删除
 	 */
 	@PostMapping("/remove")
-	@ApiOperation(value = "逻辑删除", notes = "传入notice", position = 6)
+	@ApiOperationSupport(order = 6)
+	@ApiOperation(value = "逻辑删除", notes = "传入notice")
 	public R remove(@ApiParam(value = "主键集合") @RequestParam String ids) {
 		boolean temp = noticeService.deleteLogic(Func.toLongList(ids));
 		return R.status(temp);
