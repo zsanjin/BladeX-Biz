@@ -19,6 +19,7 @@ package com.example.demo.launcher;
 import org.springblade.core.auto.service.AutoService;
 import org.springblade.core.launch.constant.NacosConstant;
 import org.springblade.core.launch.service.LauncherService;
+import org.springblade.core.launch.utils.PropsUtil;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 import java.util.Properties;
@@ -34,9 +35,9 @@ public class DemoLauncherServiceImpl implements LauncherService {
 	@Override
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].data-id", NacosConstant.dataId(appName, profile));
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].group", NacosConstant.NACOS_CONFIG_GROUP);
-		props.setProperty("spring.cloud.nacos.config.ext-config[0].refresh", NacosConstant.NACOS_CONFIG_REFRESH);
+		PropsUtil.setProperty(props, "spring.cloud.nacos.config.ext-config[0].data-id", NacosConstant.dataId(appName, profile));
+		PropsUtil.setProperty(props, "spring.cloud.nacos.config.ext-config[0].group", NacosConstant.NACOS_CONFIG_GROUP);
+		PropsUtil.setProperty(props, "spring.cloud.nacos.config.ext-config[0].refresh", NacosConstant.NACOS_CONFIG_REFRESH);
 	}
 
 	@Override

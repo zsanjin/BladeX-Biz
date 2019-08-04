@@ -20,6 +20,7 @@ import org.springblade.common.constant.CommonConstant;
 import org.springblade.core.auto.service.AutoService;
 import org.springblade.core.launch.constant.AppConstant;
 import org.springblade.core.launch.service.LauncherService;
+import org.springblade.core.launch.utils.PropsUtil;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 import java.util.Properties;
@@ -36,16 +37,16 @@ public class LauncherServiceImpl implements LauncherService {
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
 		// 通用注册
-		props.setProperty("spring.cloud.nacos.discovery.server-addr", CommonConstant.nacosAddr(profile));
-		props.setProperty("spring.cloud.nacos.config.server-addr", CommonConstant.nacosAddr(profile));
-		props.setProperty("spring.cloud.sentinel.transport.dashboard", CommonConstant.sentinelAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.nacos.discovery.server-addr", CommonConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.nacos.config.server-addr", CommonConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.sentinel.transport.dashboard", CommonConstant.sentinelAddr(profile));
 		// dubbo注册
-		props.setProperty("dubbo.application.name", appName);
-		props.setProperty("dubbo.application.qos.enable", "false");
-		props.setProperty("dubbo.protocol.name", "dubbo");
-		props.setProperty("dubbo.registry.address", "nacos://" + CommonConstant.nacosAddr(profile));
-		props.setProperty("dubbo.version", AppConstant.APPLICATION_VERSION);
-		props.setProperty("dubbo.scan.base-packages", AppConstant.BASE_PACKAGES);
+		PropsUtil.setProperty(props, "dubbo.application.name", appName);
+		PropsUtil.setProperty(props, "dubbo.application.qos.enable", "false");
+		PropsUtil.setProperty(props, "dubbo.protocol.name", "dubbo");
+		PropsUtil.setProperty(props, "dubbo.registry.address", "nacos://" + CommonConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "dubbo.version", AppConstant.APPLICATION_VERSION);
+		PropsUtil.setProperty(props, "dubbo.scan.base-packages", AppConstant.BASE_PACKAGES);
 	}
 
 }
