@@ -14,7 +14,7 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.gateway.dynamic.service;
+package org.springblade.gateway.dynamic;
 
 import com.alibaba.cloud.nacos.NacosConfigProperties;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
@@ -23,6 +23,7 @@ import com.alibaba.nacos.api.NacosFactory;
 import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
+import lombok.extern.slf4j.Slf4j;
 import org.springblade.core.launch.constant.NacosConstant;
 import org.springblade.core.launch.props.BladeProperties;
 import org.springframework.cloud.gateway.route.RouteDefinition;
@@ -38,6 +39,7 @@ import java.util.concurrent.Executor;
  * @author Chill
  */
 @Order
+@Slf4j
 @Component
 public class DynamicRouteServiceListener {
 

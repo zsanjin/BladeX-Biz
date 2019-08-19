@@ -17,9 +17,9 @@
 package org.springblade.gateway.endpoint;
 
 import lombok.AllArgsConstructor;
-import org.springblade.gateway.dynamic.model.GatewayPredicate;
-import org.springblade.gateway.dynamic.model.GatewayRoute;
-import org.springblade.gateway.dynamic.service.DynamicRouteService;
+import org.springblade.gateway.dynamic.GatewayPredicate;
+import org.springblade.gateway.dynamic.GatewayRoute;
+import org.springblade.gateway.dynamic.DynamicRouteService;
 import org.springframework.cloud.gateway.handler.predicate.PredicateDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionLocator;

@@ -14,7 +14,7 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.gateway.dynamic.model;
+package org.springblade.gateway.dynamic;
 
 import lombok.Data;
 

@@ -25,7 +25,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
  * @author lengleng
  */
 @Component
-public class RequestGlobalFilter implements GlobalFilter, Ordered {
+public class RequestFilter implements GlobalFilter, Ordered {
 
 	/**
 	 * Process the Web request and (optionally) delegate to the next

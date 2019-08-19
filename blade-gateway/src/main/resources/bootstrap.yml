@@ -15,5 +15,9 @@ spring:
 blade:
   document:
     resources:
-      - name: 演示模块
-        location: /blade-demo
+      - name: 授权模块
+        location: /blade-auth
+      - name: 工作台模块
+        location: /blade-desk
+      - name: 系统模块
+        location: /blade-system

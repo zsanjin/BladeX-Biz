@@ -42,6 +42,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>blade-starter-jwt</artifactId>
+            <version>${bladex.project.version}</version>
+        </dependency>
         <!--Spring-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -140,9 +145,10 @@
                         </goals>
                         <configuration>
                             <tasks>
+                                <!--suppress UnresolvedMavenProperty -->
                                 <copy overwrite="true"
-                                      tofile="${session.executionRootDirectory}/target/${artifactId}.jar"
-                                      file="${project.build.directory}/${artifactId}.jar" />
+                                      tofile="${session.executionRootDirectory}/target/${project.artifactId}.jar"
+                                      file="${project.build.directory}/${project.artifactId}.jar" />
                             </tasks>
                         </configuration>
                     </execution>

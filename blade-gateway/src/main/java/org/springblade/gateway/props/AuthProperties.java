@@ -14,28 +14,28 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.gateway.dynamic.model;
+package org.springblade.gateway.props;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 过滤器定义模型
+ * 权限过滤
  *
  * @author Chill
  */
 @Data
-public class GatewayFilter {
+@RefreshScope
+@ConfigurationProperties("blade.secure")
+public class AuthProperties {
 
 	/**
-	 * 过滤器对应的Name
+	 * 放行API集合
 	 */
-	private String name;
+	private final List<String> skipUrl = new ArrayList<>();
 
-	/**
-	 * 对应的路由规则
-	 */
-	private Map<String, String> args = new LinkedHashMap<>();
 }

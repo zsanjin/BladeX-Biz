@@ -18,7 +18,10 @@ package org.springblade.gateway.config;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springblade.gateway.handler.*;
+import org.springblade.gateway.handler.SwaggerResourceHandler;
+import org.springblade.gateway.props.AuthProperties;
+import org.springblade.gateway.props.RouteProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -45,22 +48,23 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @Configuration
 @AllArgsConstructor
+@EnableConfigurationProperties({RouteProperties.class, AuthProperties.class})
 public class RouterFunctionConfiguration {
+
+	private final SwaggerResourceHandler swaggerResourceHandler;
 
 	/**
 	 * 这里为支持的请求头，如果有自定义的header字段请自己添加
 	 */
-	private static final String ALLOWED_HEADERS = "x-requested-with, blade-auth, Content-Type, Authorization, credential, X-XSRF-TOKEN, token, username, client";
+	private static final String ALLOWED_HEADERS = "X-Requested-With, Blade-Auth, Content-Type, Authorization, credential, X-XSRF-TOKEN, token, username, client";
 	private static final String ALLOWED_METHODS = "*";
 	private static final String ALLOWED_ORIGIN = "*";
 	private static final String ALLOWED_EXPOSE = "*";
 	private static final String MAX_AGE = "18000L";
 
-	private final HystrixFallbackHandler hystrixFallbackHandler;
-	private final SwaggerResourceHandler swaggerResourceHandler;
-	private final SwaggerSecurityHandler swaggerSecurityHandler;
-	private final SwaggerUiHandler swaggerUiHandler;
-
+	/**
+	 * 跨域配置
+	 */
 	@Bean
 	public WebFilter corsFilter() {
 		return (ServerWebExchange ctx, WebFilterChain chain) -> {
@@ -83,22 +87,16 @@ public class RouterFunctionConfiguration {
 		};
 	}
 
+
 	@Bean
 	public RouterFunction routerFunction() {
-		return RouterFunctions.route(
-			RequestPredicates.path("/fallback")
-				.and(RequestPredicates.accept(MediaType.TEXT_PLAIN)), hystrixFallbackHandler)
-			.andRoute(RequestPredicates.GET("/swagger-resources")
-				.and(RequestPredicates.accept(MediaType.ALL)), swaggerResourceHandler)
-			.andRoute(RequestPredicates.GET("/swagger-resources/configuration/ui")
-				.and(RequestPredicates.accept(MediaType.ALL)), swaggerUiHandler)
-			.andRoute(RequestPredicates.GET("/swagger-resources/configuration/security")
-				.and(RequestPredicates.accept(MediaType.ALL)), swaggerSecurityHandler);
+		return RouterFunctions.route(RequestPredicates.GET("/swagger-resources")
+			.and(RequestPredicates.accept(MediaType.ALL)), swaggerResourceHandler);
 
 	}
 
 	/**
-	 * 解决springboot2.0.5版本出现的 Only one connection receive subscriber allowed.
+	 * 解决 Only one connection receive subscriber allowed.
 	 * 参考：https://github.com/spring-cloud/spring-cloud-gateway/issues/541
 	 */
 	@Bean

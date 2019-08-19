@@ -14,18 +14,28 @@
  *  this software without specific prior written permission.
  *  Author: Chill 庄骞 (smallchill@163.com)
  */
-package org.springblade.gateway.config;
+package org.springblade.gateway.dynamic;
 
-import org.springblade.gateway.props.RouteProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import lombok.Data;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
- * Swagger聚合文档配置
+ * 过滤器定义模型
  *
  * @author Chill
  */
-@Configuration
-@EnableConfigurationProperties(RouteProperties.class)
-public class SwaggerRouteConfiguration {
+@Data
+public class GatewayFilter {
+
+	/**
+	 * 过滤器对应的Name
+	 */
+	private String name;
+
+	/**
+	 * 对应的路由规则
+	 */
+	private Map<String, String> args = new LinkedHashMap<>();
 }
