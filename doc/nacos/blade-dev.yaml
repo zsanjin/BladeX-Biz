@@ -22,9 +22,7 @@ blade:
       password: root
   document:
     resources:
-      - name: 授权模块
-        location: /blade-auth
-      - name: 工作台模块
-        location: /blade-desk
-      - name: 系统模块
-        location: /blade-system
+      - name: Demo模块
+        location: /blade-demo
+      - name: Dubbo模块
+        location: /blade-dubbo-consumer
