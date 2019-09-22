@@ -46,6 +46,7 @@ public class AuthProvider {
 		defaultSkipUrl.add("/process/resource-view");
 		defaultSkipUrl.add("/process/diagram-view");
 		defaultSkipUrl.add("/manager/check-upload");
+		defaultSkipUrl.add("/order/create");
 		defaultSkipUrl.add("/error/**");
 		defaultSkipUrl.add("/assets/**");
 	}
