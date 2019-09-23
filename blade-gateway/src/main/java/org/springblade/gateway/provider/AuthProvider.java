@@ -34,6 +34,7 @@ public class AuthProvider {
 	static {
 		defaultSkipUrl.add("/client/**");
 		defaultSkipUrl.add("/oauth/token/**");
+		defaultSkipUrl.add("/oauth/user-info");
 		defaultSkipUrl.add("/token/**");
 		defaultSkipUrl.add("/actuator/health/**");
 		defaultSkipUrl.add("/v2/api-docs/**");
