@@ -19,27 +19,19 @@ package com.example.demo.config;
 
 import com.example.demo.props.DemoProperties;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springblade.core.secure.registry.SecureRegistry;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Demo配置
+ * 配置feign、mybatis包名、properties
  *
  * @author Chill
  */
 @Configuration
+@EnableFeignClients({"org.springblade", "com.example"})
 @MapperScan({"org.springblade.**.mapper.**", "com.example.**.mapper.**"})
 @EnableConfigurationProperties(DemoProperties.class)
-public class DemoConfiguration implements WebMvcConfigurer {
-
-	@Bean
-	public SecureRegistry secureRegistry() {
-		SecureRegistry secureRegistry = new SecureRegistry();
-		secureRegistry.excludePathPatterns("/demo/**");
-		return secureRegistry;
-	}
+public class DemoConfiguration {
 
 }

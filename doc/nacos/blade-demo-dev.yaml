@@ -1,2 +1,9 @@
+#自定义配置
 demo:
   name: demo-name
+
+#放行配置
+blade:
+  secure:
+    skip-url:
+      - /demo/**
