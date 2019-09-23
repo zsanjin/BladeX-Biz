@@ -32,7 +32,7 @@ public class AuthProvider {
 	private static List<String> defaultSkipUrl = new ArrayList<>();
 
 	static {
-		defaultSkipUrl.add("/client/**");
+		defaultSkipUrl.add("/example");
 		defaultSkipUrl.add("/oauth/token/**");
 		defaultSkipUrl.add("/oauth/user-info");
 		defaultSkipUrl.add("/token/**");
