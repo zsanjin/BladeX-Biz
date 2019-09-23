@@ -4,14 +4,13 @@ import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springblade.core.minio.MinioTemplate;
+import org.springblade.core.oss.model.BladeFile;
 import org.springblade.core.tool.api.R;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.Objects;
 
 /**
  * UploadController
@@ -33,11 +32,10 @@ public class UploadController {
 	 * @return String
 	 */
 	@SneakyThrows
-	@PostMapping("put-minio-object")
-	public R<String> putMinioObject(@RequestParam MultipartFile file) {
-		minioTemplate.putFile(file);
-		String link = minioTemplate.fileLink(Objects.requireNonNull(file.getOriginalFilename()));
-		return R.data(link);
+	@PostMapping("put-object")
+	public R<BladeFile> putMinioObject(@RequestParam MultipartFile file) {
+		BladeFile bladeFile = minioTemplate.putFile(file);
+		return R.data(bladeFile);
 	}
 
 }
