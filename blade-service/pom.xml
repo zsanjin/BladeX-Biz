@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springblade</groupId>
         <artifactId>BladeX-Biz</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
     </parent>
 
     <artifactId>blade-service</artifactId>
     <name>${project.artifactId}</name>
-    <version>2.1.0.RELEASE</version>
+    <version>2.2.0.RELEASE</version>
     <packaging>pom</packaging>
     <description>BladeX 微服务集合</description>
 
@@ -24,12 +24,10 @@
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-common</artifactId>
-            <version>${bladex.project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-starter-tenant</artifactId>
-            <version>${bladex.tool.version}</version>
         </dependency>
     </dependencies>
 

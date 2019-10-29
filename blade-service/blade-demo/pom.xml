@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springblade</groupId>
         <artifactId>blade-service</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -20,22 +20,18 @@
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-core-boot</artifactId>
-            <version>${bladex.tool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-starter-swagger</artifactId>
-            <version>${bladex.tool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-starter-minio</artifactId>
-            <version>${bladex.tool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-starter-qiniu</artifactId>
-            <version>${bladex.tool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
@@ -50,13 +46,11 @@
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-core-test</artifactId>
-            <version>${bladex.tool.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springblade</groupId>
             <artifactId>blade-core-auto</artifactId>
-            <version>${bladex.tool.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
