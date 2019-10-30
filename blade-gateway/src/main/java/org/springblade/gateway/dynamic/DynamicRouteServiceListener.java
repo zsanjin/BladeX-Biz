@@ -78,8 +78,10 @@ public class DynamicRouteServiceListener {
 				}
 			});
 			String configInfo = configService.getConfig(dataId, group, 5000);
-			List<RouteDefinition> routeDefinitions = JSON.parseArray(configInfo, RouteDefinition.class);
-			dynamicRouteService.updateList(routeDefinitions);
+			if (configInfo != null) {
+				List<RouteDefinition> routeDefinitions = JSON.parseArray(configInfo, RouteDefinition.class);
+				dynamicRouteService.updateList(routeDefinitions);
+			}
 		} catch (NacosException ignored) {
 
 		}
