@@ -25,6 +25,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springblade.core.jwt.JwtUtil;
 import org.springblade.gateway.props.AuthProperties;
 import org.springblade.gateway.provider.AuthProvider;
+import org.springblade.gateway.provider.RequestProvider;
 import org.springblade.gateway.provider.ResponseProvider;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -53,8 +54,9 @@ public class AuthFilter implements GlobalFilter, Ordered {
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+		String originalRequestUrl = RequestProvider.getOriginalRequestUrl(exchange);
 		String path = exchange.getRequest().getURI().getPath();
-		if (isSkip(path)) {
+		if (isSkip(path) || isSkip(originalRequestUrl)) {
 			return chain.filter(exchange);
 		}
 		ServerHttpResponse resp = exchange.getResponse();
@@ -89,6 +91,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
 		DataBuffer buffer = resp.bufferFactory().wrap(result.getBytes(StandardCharsets.UTF_8));
 		return resp.writeWith(Flux.just(buffer));
 	}
+
 
 	@Override
 	public int getOrder() {

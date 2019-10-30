@@ -22,23 +22,19 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springblade.core.jwt.JwtUtil;
 import org.springblade.gateway.provider.AuthProvider;
+import org.springblade.gateway.provider.RequestProvider;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
-import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Mono;
 
-import java.net.URI;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
@@ -71,10 +67,7 @@ public class GlobalRequestLogFilter implements GlobalFilter, Ordered {
 			return chain.filter(exchange);
 		}
 
-		LinkedHashSet<URI> uris = exchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
-		URI requestUri = uris.stream().findFirst().orElse(request.getURI());
-		MultiValueMap<String, String> queryParams = request.getQueryParams();
-		String requestUrl = UriComponentsBuilder.fromPath(requestUri.getRawPath()).queryParams(queryParams).build().toUriString();
+		String requestUrl = RequestProvider.getOriginalRequestUrl(exchange);
 
 		// 构建成一条长 日志，避免并发下日志错乱
 		StringBuilder beforeReqLog = new StringBuilder(300);
