@@ -16,7 +16,7 @@
  */
 package org.springblade.common.launch;
 
-import org.springblade.common.constant.CommonConstant;
+import org.springblade.common.constant.LauncherConstant;
 import org.springblade.core.auto.service.AutoService;
 import org.springblade.core.launch.constant.AppConstant;
 import org.springblade.core.launch.service.LauncherService;
@@ -37,14 +37,14 @@ public class LauncherServiceImpl implements LauncherService {
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
 		// 通用注册
-		PropsUtil.setProperty(props, "spring.cloud.nacos.discovery.server-addr", CommonConstant.nacosAddr(profile));
-		PropsUtil.setProperty(props, "spring.cloud.nacos.config.server-addr", CommonConstant.nacosAddr(profile));
-		PropsUtil.setProperty(props, "spring.cloud.sentinel.transport.dashboard", CommonConstant.sentinelAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.nacos.discovery.server-addr", LauncherConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.nacos.config.server-addr", LauncherConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "spring.cloud.sentinel.transport.dashboard", LauncherConstant.sentinelAddr(profile));
 		// dubbo注册
 		PropsUtil.setProperty(props, "dubbo.application.name", appName);
 		PropsUtil.setProperty(props, "dubbo.application.qos.enable", "false");
 		PropsUtil.setProperty(props, "dubbo.protocol.name", "dubbo");
-		PropsUtil.setProperty(props, "dubbo.registry.address", "nacos://" + CommonConstant.nacosAddr(profile));
+		PropsUtil.setProperty(props, "dubbo.registry.address", "nacos://" + LauncherConstant.nacosAddr(profile));
 		PropsUtil.setProperty(props, "dubbo.version", AppConstant.APPLICATION_VERSION);
 		PropsUtil.setProperty(props, "dubbo.scan.base-packages", AppConstant.BASE_PACKAGES);
 	}

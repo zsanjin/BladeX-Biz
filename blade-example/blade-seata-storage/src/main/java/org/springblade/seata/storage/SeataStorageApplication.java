@@ -15,6 +15,7 @@
  */
 package org.springblade.seata.storage;
 
+import org.springblade.common.constant.LauncherConstant;
 import org.springblade.core.cloud.feign.EnableBladeFeign;
 import org.springblade.core.launch.BladeApplication;
 import org.springblade.core.transaction.annotation.SeataCloudApplication;
@@ -29,7 +30,7 @@ import org.springblade.core.transaction.annotation.SeataCloudApplication;
 public class SeataStorageApplication {
 
 	public static void main(String[] args) {
-		BladeApplication.run("blade-seata-storage", SeataStorageApplication.class, args);
+		BladeApplication.run(LauncherConstant.APPLICATION_SEATA_STORAGE_NAME, SeataStorageApplication.class, args);
 	}
 
 }

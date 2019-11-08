@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+           xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+>
+    <sheetPr/>
+    <dimension ref="A1:H13"/>
+    <sheetViews>
+        <sheetView tabSelected="1" workbookViewId="0">
+            <selection activeCell="F16" sqref="F16"/>
+        </sheetView>
+    </sheetViews>
+    <sheetFormatPr defaultColWidth="8.88888888888889" defaultRowHeight="13.2" outlineLevelCol="7"/>
+    <cols>
+        <col min="4" max="4" width="12.1111111111111" customWidth="1"/>
+        <col min="6" max="6" width="24.5555555555556" customWidth="1"/>
+        <col min="8" max="8" width="14.8888888888889" customWidth="1"/>
+    </cols>
+    <sheetData>
+        <row r="1" ht="15" spans="1:7">
+            <c r="A1" s="1" t="s">
+                <v>0</v>
+            </c>
+            <c r="B1" s="1"/>
+            <c r="C1" s="1" t="s">
+                <v>1</v>
+            </c>
+            <c r="D1" s="1" t="s">
+                <v>1</v>
+            </c>
+            <c r="E1" s="1" t="s">
+                <v>1</v>
+            </c>
+            <c r="F1" s="1" t="s">
+                <v>1</v>
+            </c>
+            <c r="G1" s="1" t="s">
+                <v>1</v>
+            </c>
+        </row>
+        <row r="2" ht="24" spans="1:8">
+            <c r="A2" s="2" t="s">
+                <v>2</v>
+            </c>
+            <c r="B2" s="2" t="s">
+                <v>3</v>
+            </c>
+            <c r="C2" s="2" t="s">
+                <v>4</v>
+            </c>
+            <c r="D2" s="2" t="s">
+                <v>5</v>
+            </c>
+            <c r="E2" s="2" t="s">
+                <v>6</v>
+            </c>
+            <c r="F2" s="2" t="s">
+                <v>7</v>
+            </c>
+            <c r="G2" s="2" t="s">
+                <v>8</v>
+            </c>
+            <c r="H2" s="3" t="s">
+                <v>40</v>
+            </c>
+        </row>
+        <row r="3" spans="1:8">
+            <c r="A3" s="4" t="s">
+                <v>9</v>
+            </c>
+            <c r="B3" s="4" t="s">
+                <v>10</v>
+            </c>
+            <c r="C3" s="4" t="s">
+                <v>11</v>
+            </c>
+            <c r="D3" s="5" t="s">
+                <v>12</v>
+            </c>
+            <c r="E3" s="6">
+                <v>55</v>
+            </c>
+            <c r="F3" s="7" t="s">
+                <v>41</v>
+            </c>
+            <c r="G3" s="8">
+                <v>1</v>
+            </c>
+            <c r="H3" s="9">
+                <v>43636</v>
+            </c>
+        </row>
+        <row r="4" spans="1:8">
+            <c r="A4" s="4"/>
+            <c r="B4" s="4"/>
+            <c r="C4" s="4"/>
+            <c r="D4" s="5" t="s">
+                <v>12</v>
+            </c>
+            <c r="E4" s="6"/>
+            <c r="F4" s="7" t="s">
+                <v>42</v>
+            </c>
+            <c r="G4" s="8">
+                <v>2</v>
+            </c>
+            <c r="H4" s="9">
+                <v>43637</v>
+            </c>
+        </row>
+        <row r="5" spans="1:8">
+            <c r="A5" s="4"/>
+            <c r="B5" s="4"/>
+            <c r="C5" s="4"/>
+            <c r="D5" s="5" t="s">
+                <v>12</v>
+            </c>
+            <c r="E5" s="6"/>
+            <c r="F5" s="7" t="s">
+                <v>43</v>
+            </c>
+            <c r="G5" s="8">
+                <v>3</v>
+            </c>
+            <c r="H5" s="9">
+                <v>43638</v>
+            </c>
+        </row>
+        <row r="6" spans="1:8">
+            <c r="A6" s="4"/>
+            <c r="B6" s="4"/>
+            <c r="C6" s="4"/>
+            <c r="D6" s="5" t="s">
+                <v>12</v>
+            </c>
+            <c r="E6" s="6"/>
+            <c r="F6" s="7" t="s">
+                <v>44</v>
+            </c>
+            <c r="G6" s="8">
+                <v>4</v>
+            </c>
+            <c r="H6" s="9">
+                <v>43639</v>
+            </c>
+        </row>
+        <row r="7" spans="1:8">
+            <c r="A7" s="4"/>
+            <c r="B7" s="4"/>
+            <c r="C7" s="4"/>
+            <c r="D7" s="5" t="s">
+                <v>12</v>
+            </c>
+            <c r="E7" s="6"/>
+            <c r="F7" s="7" t="s">
+                <v>45</v>
+            </c>
+            <c r="G7" s="8">
+                <v>5</v>
+            </c>
+            <c r="H7" s="9">
+                <v>43640</v>
+            </c>
+        </row>
+        <row r="8" ht="32.4" spans="1:8">
+            <c r="A8" s="4"/>
+            <c r="B8" s="4"/>
+            <c r="C8" s="4"/>
+            <c r="D8" s="10" t="s">
+                <v>24</v>
+            </c>
+            <c r="E8" s="11">
+                <v>105</v>
+            </c>
+            <c r="F8" s="7" t="s">
+                <v>46</v>
+            </c>
+            <c r="G8" s="8">
+                <v>2</v>
+            </c>
+            <c r="H8" s="9">
+                <v>43641</v>
+            </c>
+        </row>
+        <row r="9" ht="32.4" spans="1:8">
+            <c r="A9" s="4"/>
+            <c r="B9" s="4"/>
+            <c r="C9" s="4"/>
+            <c r="D9" s="10" t="s">
+                <v>24</v>
+            </c>
+            <c r="E9" s="11">
+                <v>105</v>
+            </c>
+            <c r="F9" s="12" t="s">
+                <v>47</v>
+            </c>
+            <c r="G9" s="6">
+                <v>4</v>
+            </c>
+            <c r="H9" s="9">
+                <v>43642</v>
+            </c>
+        </row>
+        <row r="10" ht="32.4" spans="1:8">
+            <c r="A10" s="4"/>
+            <c r="B10" s="4"/>
+            <c r="C10" s="4"/>
+            <c r="D10" s="10" t="s">
+                <v>24</v>
+            </c>
+            <c r="E10" s="11">
+                <v>105</v>
+            </c>
+            <c r="F10" s="12" t="s">
+                <v>48</v>
+            </c>
+            <c r="G10" s="6">
+                <v>6</v>
+            </c>
+            <c r="H10" s="9">
+                <v>43643</v>
+            </c>
+        </row>
+        <row r="11" ht="32.4" spans="1:8">
+            <c r="A11" s="4"/>
+            <c r="B11" s="4"/>
+            <c r="C11" s="4"/>
+            <c r="D11" s="10" t="s">
+                <v>24</v>
+            </c>
+            <c r="E11" s="11">
+                <v>105</v>
+            </c>
+            <c r="F11" s="12" t="s">
+                <v>49</v>
+            </c>
+            <c r="G11" s="6">
+                <v>8</v>
+            </c>
+            <c r="H11" s="9">
+                <v>43644</v>
+            </c>
+        </row>
+        <row r="12" ht="32.4" spans="1:8">
+            <c r="A12" s="4"/>
+            <c r="B12" s="4"/>
+            <c r="C12" s="4"/>
+            <c r="D12" s="10" t="s">
+                <v>24</v>
+            </c>
+            <c r="E12" s="11">
+                <v>105</v>
+            </c>
+            <c r="F12" s="13" t="s">
+                <v>32</v>
+            </c>
+            <c r="G12" s="6">
+                <v>10</v>
+            </c>
+            <c r="H12" s="9">
+                <v>43645</v>
+            </c>
+        </row>
+        <row r="13" spans="3:6">
+            <c r="C13" s="4"/>
+            <c r="E13">
+                <f>SUM(E3:E12)</f>
+                <v>580</v>
+            </c>
+            <c r="F13" s="14"/>
+        </row>
+    </sheetData>
+    <mergeCells count="5">
+        <mergeCell ref="A1:G1"/>
+        <mergeCell ref="A3:A12"/>
+        <mergeCell ref="B3:B12"/>
+        <mergeCell ref="C3:C13"/>
+        <mergeCell ref="E3:E7"/>
+    </mergeCells>
+    <hyperlinks>
+        <hyperlink ref="F12" r:id="rId1" display="语文分支4"/>
+    </hyperlinks>
+    <pageMargins left="0.75" right="0.75" top="1" bottom="1" header="0.5" footer="0.5"/>
+    <headerFooter/>
+</worksheet>

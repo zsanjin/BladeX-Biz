@@ -17,7 +17,7 @@
 package org.springblade.example.consumer;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
-import org.springblade.common.constant.CommonConstant;
+import org.springblade.common.constant.LauncherConstant;
 import org.springblade.core.cloud.feign.EnableBladeFeign;
 import org.springblade.core.launch.BladeApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -33,7 +33,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
 public class DubboConsumerApplication {
 
 	public static void main(String[] args) {
-		BladeApplication.run(CommonConstant.APPLICATION_DUBBO_CONSUMER_NAME, DubboConsumerApplication.class, args);
+		BladeApplication.run(LauncherConstant.APPLICATION_DUBBO_CONSUMER_NAME, DubboConsumerApplication.class, args);
 	}
 
 }

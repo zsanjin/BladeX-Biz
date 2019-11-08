@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="261" uniqueCount="50">
+    <si>
+        <t>学生成绩</t>
+    </si>
+    <si>
+        <t></t>
+    </si>
+    <si>
+        <t>姓名</t>
+    </si>
+    <si>
+        <t>身份证</t>
+    </si>
+    <si>
+        <t>班主任寄语</t>
+    </si>
+    <si>
+        <t>学科</t>
+    </si>
+    <si>
+        <t>学科成绩</t>
+    </si>
+    <si>
+        <t>子学科</t>
+    </si>
+    <si>
+        <t>子学科成绩</t>
+    </si>
+    <si>
+        <t>小明</t>
+    </si>
+    <si>
+        <t>3708271234</t>
+    </si>
+    <si>
+        <t>好好学习</t>
+    </si>
+    <si>
+        <t>数学</t>
+    </si>
+    <si>
+        <t>55</t>
+    </si>
+    <si>
+        <t>数学分支0</t>
+    </si>
+    <si>
+        <t>1</t>
+    </si>
+    <si>
+        <t>数学分支1</t>
+    </si>
+    <si>
+        <t>2</t>
+    </si>
+    <si>
+        <t>数学分支2</t>
+    </si>
+    <si>
+        <t>3</t>
+    </si>
+    <si>
+        <t>数学分支3</t>
+    </si>
+    <si>
+        <t>4</t>
+    </si>
+    <si>
+        <t>数学分支4</t>
+    </si>
+    <si>
+        <t>5</t>
+    </si>
+    <si>
+        <t>语文</t>
+    </si>
+    <si>
+        <t>105</t>
+    </si>
+    <si>
+        <t>语文分支0</t>
+    </si>
+    <si>
+        <t>语文分支1</t>
+    </si>
+    <si>
+        <t>语文分支2</t>
+    </si>
+    <si>
+        <t>6</t>
+    </si>
+    <si>
+        <t>语文分支3</t>
+    </si>
+    <si>
+        <t>8</t>
+    </si>
+    <si>
+        <t>语文分支4</t>
+    </si>
+    <si>
+        <t>10</t>
+    </si>
+    <si>
+        <t>小红</t>
+    </si>
+    <si>
+        <t>3708271235</t>
+    </si>
+    <si>
+        <t>天天向上</t>
+    </si>
+    <si>
+        <t>小兰</t>
+    </si>
+    <si>
+        <t>3708271237</t>
+    </si>
+    <si>
+        <t>天天向上啊</t>
+    </si>
+    <si>
+        <t>成绩日期</t>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>数学分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>0</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>数学分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>1</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>数学分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>2</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>数学分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>3</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>数学分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>4</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>语文分支</t>
+        </r>
+        <r>
+            <rPr>
+                <sz val="10"/>
+                <color rgb="FFFF0000"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>0</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>语文分支</t>
+        </r>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>1</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>语文分支</t>
+        </r>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>2</t>
+        </r>
+    </si>
+    <si>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="宋体"/>
+                <charset val="0"/>
+            </rPr>
+            <t>语文分支</t>
+        </r>
+        <r>
+            <rPr>
+                <b/>
+                <i/>
+                <sz val="10"/>
+                <rFont val="Arial"/>
+                <charset val="0"/>
+            </rPr>
+            <t>3</t>
+        </r>
+    </si>
+</sst>

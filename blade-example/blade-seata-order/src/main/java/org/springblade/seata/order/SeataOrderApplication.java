@@ -15,6 +15,7 @@
  */
 package org.springblade.seata.order;
 
+import org.springblade.common.constant.LauncherConstant;
 import org.springblade.core.cloud.feign.EnableBladeFeign;
 import org.springblade.core.launch.BladeApplication;
 import org.springblade.core.transaction.annotation.SeataCloudApplication;
@@ -29,7 +30,7 @@ import org.springblade.core.transaction.annotation.SeataCloudApplication;
 public class SeataOrderApplication {
 
 	public static void main(String[] args) {
-		BladeApplication.run("blade-seata-order", SeataOrderApplication.class, args);
+		BladeApplication.run(LauncherConstant.APPLICATION_SEATA_ORDER_NAME, SeataOrderApplication.class, args);
 	}
 
 }
