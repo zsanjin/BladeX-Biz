@@ -21,6 +21,7 @@
         <module>blade-seata-order</module>
         <module>blade-seata-storage</module>
         <module>blade-easypoi</module>
+        <module>blade-websocket</module>
     </modules>
 
     <dependencies>
