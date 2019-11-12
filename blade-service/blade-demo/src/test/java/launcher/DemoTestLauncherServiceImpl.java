@@ -16,7 +16,7 @@
  */
 package launcher;
 
-import org.springblade.common.constant.CommonConstant;
+import org.springblade.common.constant.LauncherConstant;
 import org.springblade.core.auto.service.AutoService;
 import org.springblade.core.launch.service.LauncherService;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -34,9 +34,9 @@ public class DemoTestLauncherServiceImpl implements LauncherService {
 	@Override
 	public void launcher(SpringApplicationBuilder builder, String appName, String profile, boolean isLocalDev) {
 		Properties props = System.getProperties();
-		props.setProperty("spring.cloud.nacos.discovery.server-addr", CommonConstant.NACOS_DEV_ADDR);
-		props.setProperty("spring.cloud.nacos.config.server-addr", CommonConstant.NACOS_DEV_ADDR);
-		props.setProperty("spring.cloud.sentinel.transport.dashboard", CommonConstant.SENTINEL_DEV_ADDR);
+		props.setProperty("spring.cloud.nacos.discovery.server-addr", LauncherConstant.NACOS_DEV_ADDR);
+		props.setProperty("spring.cloud.nacos.config.server-addr", LauncherConstant.NACOS_DEV_ADDR);
+		props.setProperty("spring.cloud.sentinel.transport.dashboard", LauncherConstant.SENTINEL_DEV_ADDR);
 	}
 
 	@Override

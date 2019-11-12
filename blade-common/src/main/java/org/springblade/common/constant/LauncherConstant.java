@@ -28,6 +28,11 @@ import static org.springblade.core.launch.constant.AppConstant.APPLICATION_NAME_
 public interface LauncherConstant {
 
 	/**
+	 * nacos namespace id
+	 */
+	String NACOS_NAMESPACE = "f447a694-519a-4255-95f9-bcbb5a5d636";
+
+	/**
 	 * nacos dev 地址
 	 */
 	String NACOS_DEV_ADDR = "127.0.0.1:8848";
