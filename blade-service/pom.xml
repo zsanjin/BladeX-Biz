@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.springblade</groupId>
         <artifactId>BladeX-Biz</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>2.2.1.RELEASE</version>
     </parent>
 
     <artifactId>blade-service</artifactId>
     <name>${project.artifactId}</name>
-    <version>2.2.0.RELEASE</version>
+    <version>2.2.1.RELEASE</version>
     <packaging>pom</packaging>
     <description>BladeX 微服务集合</description>
 
