@@ -30,7 +30,7 @@ public interface LauncherConstant {
 	/**
 	 * nacos namespace id
 	 */
-	String NACOS_NAMESPACE = "f447a694-519a-4255-95f9-bcbb5a5d636";
+	String NACOS_NAMESPACE = "f447a694-519a-4255-95f9-bcbb5a5d6369";
 
 	/**
 	 * nacos dev 地址
