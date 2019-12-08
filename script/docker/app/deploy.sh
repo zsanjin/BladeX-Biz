@@ -14,6 +14,9 @@ port(){
 	firewall-cmd --add-port=3306/tcp --permanent
 	firewall-cmd --add-port=3379/tcp --permanent
 	firewall-cmd --add-port=7002/tcp --permanent
+	firewall-cmd --add-port=7003/tcp --permanent
+	firewall-cmd --add-port=9411/tcp --permanent
+	firewall-cmd --add-port=9999/tcp --permanent
 	service firewalld restart
 }
 
@@ -39,14 +42,14 @@ base(){
 	docker-compose up -d nacos sentinel web-nginx blade-nginx blade-redis
 }
 
-#启动程序模块
-modules(){
-	docker-compose up -d blade-gateway1 blade-gateway2 blade-auth1 blade-auth2 blade-user blade-desk blade-system blade-log
-}
-
 #启动监控模块
 monitor(){
-	docker-compose up -d blade-admin
+	docker-compose up -d blade-admin blade-turbine blade-zipkin
+}
+
+#启动程序模块
+modules(){
+	docker-compose up -d blade-gateway1 blade-gateway2 blade-auth1 blade-auth2 blade-user blade-desk blade-system blade-log blade-flow blade-flow-design blade-resource
 }
 
 #关闭所有模块

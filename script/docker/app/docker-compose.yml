@@ -1,10 +1,11 @@
 version: '3'
 services:
   nacos:
-    image: nacos/nacos-server:1.0.0
+    image: nacos/nacos-server:1.1.3
     hostname: "nacos-standalone"
     environment:
       - MODE=standalone
+      - TZ=Asia/Shanghai
     volumes:
       - /docker/nacos/standalone-logs/:/home/nacos/logs
       - /docker/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties
@@ -17,6 +18,8 @@ services:
   sentinel:
     image: bladex/sentinel-dashboard:1.6.0
     hostname: "sentinel"
+    environment:
+      - TZ=Asia/Shanghai
     ports:
       - 8858:8858
     restart: on-failure
@@ -27,6 +30,8 @@ services:
   blade-nginx:
     image: nginx:stable-alpine-perl
     hostname: "blade-nginx"
+    environment:
+      - TZ=Asia/Shanghai
     ports:
     - 88:88
     volumes:
@@ -39,6 +44,8 @@ services:
   web-nginx:
     image: nginx:stable-alpine-perl
     hostname: "web-nginx"
+    environment:
+      - TZ=Asia/Shanghai
     ports:
       - 8000:8000
     volumes:
@@ -52,6 +59,8 @@ services:
   blade-redis:
     image: redis:5.0.2-alpine
     hostname: "blade-redis"
+    environment:
+      - TZ=Asia/Shanghai
     ports:
     - 3379:6379
     volumes:
@@ -64,6 +73,8 @@ services:
 
   blade-admin:
     image: "${REGISTER}/blade/blade-admin:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     ports:
     - 7002:7002
     privileged: true
@@ -71,8 +82,32 @@ services:
     networks:
     - blade_net
 
+  blade-turbine:
+    image: "${REGISTER}/blade/blade-turbine:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 7003:7003
+    privileged: true
+    restart: always
+    networks:
+      - blade_net
+
+  blade-zipkin:
+    image: "${REGISTER}/blade/blade-zipkin:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9411:9411
+    privileged: true
+    restart: always
+    networks:
+      - blade_net
+
   blade-gateway1:
     image: "${REGISTER}/blade/blade-gateway:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -81,6 +116,8 @@ services:
 
   blade-gateway2:
     image: "${REGISTER}/blade/blade-gateway:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -89,6 +126,8 @@ services:
 
   blade-auth1:
     image: "${REGISTER}/blade/blade-auth:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -97,6 +136,8 @@ services:
 
   blade-auth2:
     image: "${REGISTER}/blade/blade-auth:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -105,6 +146,8 @@ services:
 
   blade-log:
     image: "${REGISTER}/blade/blade-log:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -112,6 +155,8 @@ services:
 
   blade-desk:
     image: "${REGISTER}/blade/blade-desk:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -119,6 +164,8 @@ services:
 
   blade-user:
     image: "${REGISTER}/blade/blade-user:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -126,6 +173,8 @@ services:
 
   blade-system:
     image: "${REGISTER}/blade/blade-system:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -133,6 +182,8 @@ services:
 
   blade-flow:
     image: "${REGISTER}/blade/blade-flow:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     networks:
@@ -140,10 +191,21 @@ services:
 
   blade-flow-design:
     image: "${REGISTER}/blade/blade-flow-design:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     restart: always
     ports:
       - 9999:9999
+    networks:
+      - blade_net
+
+  blade-resource:
+    image: "${REGISTER}/blade/blade-resource:${TAG}"
+    environment:
+      - TZ=Asia/Shanghai
+    privileged: true
+    restart: always
     networks:
       - blade_net
 
