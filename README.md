@@ -60,5 +60,3 @@ BladeX
 └──  └── blade-user-api -- 用户api 
 ```
 
-# 界面
-## 监控界面一览
